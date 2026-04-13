@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ぽーちゃんガチャ</title>
+
+<style>
+body {
+  text-align: center;
+  font-family: "Hiragino Maru Gothic Pro", sans-serif;
+  background: #fff0f5;
+}
+
+h1 {
+  color: #ff69b4;
+  margin-top: 40px;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ff1493;
+}
+
+#result {
+  margin-top: 40px;
+  font-size: 24px;
+  background: white;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🐶ぽーちゃんおみくじガチャ🐾</h1>
+<img src="pochan.png" width="200">
+<button onclick="draw()">🎰まわすモイ〜✨</button>
+
+<div id="result"></div>
+
+<script>
+function draw() {
+  const results = [
+    "🌸大吉✨ モイモイ〜！今日は最高の日やで🐾💕",
+    "🌼中吉😊 いい流れ来てるで✨🌈",
+    "🍀吉🐾 焦らんでOK、コツコツいこ✨☕",
+    "🌱小吉💤 今日はゆっくりでええ日やで🍀",
+    "🤣残念☀️ また明日モイ〜🐾✨"
+  ];
+
+  const random = Math.floor(Math.random() * results.length);
+  document.getElementById("result").innerText = results[random];
+}
+</script>
+
+</body>
+</html>
